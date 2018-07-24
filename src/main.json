@@ -1,0 +1,37 @@
+{
+  "pages": [
+    "pages/home/main",
+    "pages/all/main",
+    "pages/me/main"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fafafa",
+    "navigationBarTitleText": "一个",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#130f13",
+    "selectedColor": "#0f0f0f",
+    "list": [
+      {
+          "pagePath":"pages/home/main",
+          "text":"HOME",
+          "iconPath":"rec/icon/one.png",
+          "selectedIconPath":"rec/icon/one.png"
+      },
+      {
+          "pagePath":"pages/all/main",
+          "text":"ALL",
+          "iconPath":"rec/icon/all.png",
+          "selectedIconPath":"rec/icon/all.png"
+      },
+      {
+          "pagePath":"pages/me/main",
+          "text":"ME",
+          "iconPath":"rec/icon/me.png",
+          "selectedIconPath":"rec/icon/me.png"
+      }
+    ]
+  }
+}
