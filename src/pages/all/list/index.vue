@@ -22,11 +22,13 @@
       :url="'/pages/all/movieDetail/main?id='+info.item_id"
     >{{info.title}}</navigator>
    </div>
+   
     </div>
 </template>
 
 <script>
 import { mapState, mapActions } from "vuex";
+import oneBottom from '@/components/one'
 export default {
   onLoad(query) {
     const { cls } = query;
@@ -34,6 +36,9 @@ export default {
     this.infoList={};
   },
   created() {},
+  components:{
+        "v-one-bottom":oneBottom
+  },
   data(){
     return {
         infoList:{},

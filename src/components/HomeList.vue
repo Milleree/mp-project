@@ -41,121 +41,120 @@
 </template>
 <script>
 export default {
-    created(){
-
-    },
-    props:{
-        weather:Object,
-        ContentList:Object
-    },
-    data(){
-        return {
-            // clsList:["","ONE STORY",""]
-        }
-    },
-    computed:{
-        weatherText(){
-            return `${this.weather.city_name}·${this.weather.climate}
+  created() {},
+  props: {
+    weather: Object,
+    ContentList: Object
+  },
+  data() {
+    return {
+      // clsList:["","ONE STORY",""]
+    };
+  },
+  computed: {
+    weatherText() {
+      return `${this.weather.city_name}·${this.weather.climate}
              温度：${this.weather.temperature}°C 
              风力：${this.weather.wind_direction} 
-             湿度：${this.weather.humidity}`
-        }
-    },
-    methods:{
-        ToUrl(cls,item_id){
-            let url=""
-            if(cls==1){
-                url='/pages/all/essayDetail/main?id='+item_id;
-            }else if(cls==2){
-                url='/pages/all/longDetail/main?id='+item_id;
-            }else if(cls==3){
-                url='/pages/all/questionDetail/main?id='+item_id;
-            }else if(cls==4){
-                url='/pages/all/musicDetail/main?id='+item_id;
-            }else if(cls==5){
-                url='/pages/all/movieDetail/main?id='+item_id;
-            }
-            wx.navigateTo({ url })
-        }
+             湿度：${this.weather.humidity}`;
     }
-}
+  },
+  methods: {
+    ToUrl(cls, item_id) {
+      let url = "";
+      if (cls == 1) {
+        url = "/pages/all/essayDetail/main?id=" + item_id;
+      } else if (cls == 2) {
+        url = "/pages/all/longDetail/main?id=" + item_id;
+      } else if (cls == 3) {
+        url = "/pages/all/questionDetail/main?id=" + item_id;
+      } else if (cls == 4) {
+        url = "/pages/all/musicDetail/main?id=" + item_id;
+      } else if (cls == 5) {
+        url = "/pages/all/movieDetail/main?id=" + item_id;
+      }
+      wx.navigateTo({ url });
+    }
+  }
+};
 </script>
 <style scoped>
 @font-face {
-  font-family: 'iconfont';  /* project id 759446 */
-  src: url('//at.alicdn.com/t/font_759446_9ve3xg1k97.eot');
-  src: url('//at.alicdn.com/t/font_759446_9ve3xg1k97.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_759446_9ve3xg1k97.woff') format('woff'),
-  url('//at.alicdn.com/t/font_759446_9ve3xg1k97.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_759446_9ve3xg1k97.svg#iconfont') format('svg');
+  font-family: "iconfont"; /* project id 759446 */
+  src: url("//at.alicdn.com/t/font_759446_9ve3xg1k97.eot");
+  src: url("//at.alicdn.com/t/font_759446_9ve3xg1k97.eot?#iefix")
+      format("embedded-opentype"),
+    url("//at.alicdn.com/t/font_759446_9ve3xg1k97.woff") format("woff"),
+    url("//at.alicdn.com/t/font_759446_9ve3xg1k97.ttf") format("truetype"),
+    url("//at.alicdn.com/t/font_759446_9ve3xg1k97.svg#iconfont") format("svg");
 }
 .weather {
-    text-align: center;
-    width: 100%;
+  text-align: center;
+  width: 100%;
 }
-.weather-text{
-    font-size: 9pt;
-    color: #888888;
+.weather-text {
+  font-size: 9pt;
+  color: #888888;
 }
-.main-content{
-    height: auto;
-    text-align: center;
+.main-content {
+  height: auto;
+  text-align: center;
 }
-.content-img{
-    width: 100%;
-    margin: 2pt auto;
+.content-img {
+  width: 100%;
+  margin: 2pt auto;
 }
-.img-info{
-    font-size: 10pt;
-    color: #888888;
+.img-info {
+  font-size: 10pt;
+  color: #888888;
 }
-.img-text{
-    font-size: 10pt;
+.img-text {
+  font-size: 10pt;
 }
-.main-content view{
-    background-color: #FFFFFf
+.main-content view {
+  background-color: #ffffff;
 }
-.one-content{
-    margin-top: 10pt;
-    padding: 0px 10px 5px;
-    font-size: 9pt;
-    color: #888888;
+.one-content {
+  margin-top: 10pt;
+  padding: 0px 10px 5px;
+  font-size: 9pt;
+  color: #888888;
 }
-.content-left{
-    text-align: left;
+.content-left {
+  text-align: left;
 }
-.content-title{
-    font-size: 12pt;
-    color: black;
+.content-title {
+  font-size: 12pt;
+  color: black;
 }
-.iconfont{
-    font-family:"iconfont" !important;
-    font-size:16px;
-    font-style:normal;
-    -webkit-font-smoothing: antialiased;
-    -webkit-text-stroke-width: 0.2px;
-    -moz-osx-font-smoothing: grayscale;
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
 }
-.in-block{
-    display: inline-block;
-    text-align: right;
+.in-block {
+  display: inline-block;
+  text-align: right;
 }
-.content-date{
-    display: flex;
-    flex-wrap: wrap;
-    margin: 2pt auto;
+.content-date {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 2pt auto;
 }
-.content-bottom{
-    width: 50%;
+.content-bottom {
+  width: 50%;
 }
-.content-right{
-    text-align: right;
+.content-right {
+  text-align: right;
 }
-.clear-float{
-    clear: both;
+.clear-float {
+  clear: both;
 }
-.right-title{
-    padding: 4pt 0pt;
+.right-title {
+  padding: 4pt 0pt;
 }
 </style>
 
