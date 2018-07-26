@@ -24,7 +24,6 @@ const actions={
     },
     async getHomeData({commit}){
         const {data}=await API.getHomeData(state.data.IdList[0])
-        console.log(data)
         commit(GET_HOME_DATA,{data})
     }
 }

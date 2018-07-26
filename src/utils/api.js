@@ -30,7 +30,7 @@ const api = {
   //电影,category=5
   getMovieDetail:(itemId)=>request.get('movie/'+itemId+'/story/1/0'+endUrl),
   //音乐，某日时间传递
-  getMusicDateDetail:(_Date)=>request.get('music/bymonth/'+_Date+endUrl),
+  // getMusicDateDetail:(ite)=>request.get('music/bymonth/'+_Date+endUrl),
 
 }
 

@@ -2,7 +2,13 @@
   "pages": [
     "pages/home/main",
     "pages/all/main",
-    "pages/me/main"
+    "pages/me/main",
+    "pages/all/list/main",
+    "pages/all/essayDetail/main",
+    "pages/all/longDetail/main",
+    "pages/all/movieDetail/main",
+    "pages/all/questionDetail/main",
+    "pages/all/musicDetail/main"
   ],
   "window": {
     "backgroundTextStyle": "light",
