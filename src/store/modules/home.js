@@ -13,7 +13,7 @@ const mutations = {
         state.data.IdList=payload.IdList
     },
     [GET_HOME_DATA](state,payload){
-        state.data=payload.data
+        state.data.HomeData=payload.data
     }
 }
 
