@@ -38,7 +38,6 @@ const actions={
     },
     async getAllMovie({commit}){
         const {data}=await API.getAllMovie()
-        console.log(data);
         commit(GET_ALL_MOVIE,{data})
     },
     async getAllMusic({commit}){

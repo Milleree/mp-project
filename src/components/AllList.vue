@@ -12,7 +12,7 @@
                 <text>{{hotlist.clsName2}}</text>
             </view>
             <view class="all-in-right" v-for="(list,index) in data.HomeData.content_list"  v-if="index==hotlistindex" :key="index">
-                <image mode="widthFix" :src="list.img_url"/>
+                <image  lazy-load=true mode="widthFix" :src="list.img_url"/>
             </view>
         </view>
     </view>
@@ -22,7 +22,6 @@
 import {mapState,mapGetter} from 'vuex'
 export default {
     created(){
-        console.log(this.data)
     },
     data(){
         return{
@@ -40,7 +39,6 @@ export default {
     methods:{
         ToUrl(cls){
             let url="";
-            
             if(cls==1){
                 url="/pages/all/list/main?cls=1";
             }else if(cls==4){
@@ -48,7 +46,6 @@ export default {
             }else if(cls==5){
                 url="/pages/all/list/main?cls=3";
             }
-            console.log(url)
             wx.navigateTo({ url });
         }
     }

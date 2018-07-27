@@ -1,34 +1,13 @@
 <template>
-    <div class="container">
-        <text>列表</text>
-   <div v-if="cls==1" v-for="info in infoList" v-bind:key="info.item_id">
-    <navigator v-show="info.category==1"
-      :url="'/pages/all/essayDetail/main?id='+info.item_id"
-    >{{info.title}}</navigator>
-    <navigator v-show="info.category==2"
-      :url="'/pages/all/longDetail/main?id='+info.item_id"
-    >{{info.title}}</navigator>
-    <navigator v-show="info.category==3"
-      :url="'/pages/all/questionDetail/main?id='+info.item_id"
-    >{{info.title}}</navigator>
-   </div>
-      <div v-if="cls==2" v-for="info in infoList" v-bind:key="info.id">
-    <navigator
-      :url="'/pages/all/musicDetail/main?id='+info.id"
-    >{{info.title}}</navigator>
-   </div>
-      <div v-if="cls==3" v-for="info in infoList" v-bind:key="info.item_id">
-    <navigator
-      :url="'/pages/all/movieDetail/main?id='+info.item_id"
-    >{{info.title}}</navigator>
-   </div>
-   
-    </div>
+    <block>
+    <v-one-list :hotList="infoList" v-if="infoList!=''"></v-one-list>
+    </block>
 </template>
 
 <script>
 import { mapState, mapActions } from "vuex";
 import oneBottom from '@/components/one'
+import InfoList from '@/components/InfoList'
 export default {
   onLoad(query) {
     const { cls } = query;
@@ -37,11 +16,12 @@ export default {
   },
   created() {},
   components:{
-        "v-one-bottom":oneBottom
+        "v-one-bottom":oneBottom,
+        "v-one-list":InfoList
   },
   data(){
     return {
-        infoList:{},
+        infoList:"",
         cls:""
     }
   },
@@ -63,7 +43,6 @@ export default {
              await this.getAllMovie()
             this.infoList=this.data.movieList;
         }
-        console.log(this.infoList)
     },
     getNowMonth(){
         let date = new Date();          //获取当前时间
@@ -82,4 +61,9 @@ export default {
   }
 }
 </script>
+<style>
+page{
+  background-color: #f7f7f7;
+}
+</style>
 

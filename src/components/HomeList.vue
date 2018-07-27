@@ -5,7 +5,7 @@
     </view>
     <view v-for="content in ContentList" :key="content.id" class="main-content">
        <view v-if="content.category=='0'" class="img-content">
-        <image mode="aspectFill" class="content-img" :src="content.img_url" />
+        <image lazy-load=true mode="aspectFill" class="content-img" :src="content.img_url" />
         <text class="img-info">{{content.title}}|{{content.pic_info}}</text>
         <br>
         <text class="img-text">{{content.words_info}}</text>

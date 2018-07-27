@@ -10,6 +10,7 @@ import {
 import API from '@/utils/api'
 
 const state={
+    nowDetail:{},
     data:{
         essayDetail:{},
         longDetail:{},
@@ -40,7 +41,6 @@ const mutations={
 const actions={
     async getEssayDetail({commit,state},itemId){
         const { data }=await API.getEssayDetail(itemId)
-        console.log(data);
         commit(GET_ESSAY_DETAIL, { data } )
     },
     async getLongDetail({commit,state},itemId){
