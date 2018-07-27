@@ -10,9 +10,9 @@
         <br>
         <text class="img-text">{{content.words_info}}</text>
        </view>
-
        <view v-if="content.category!=='0'&&content.category!=8" v-on:click="ToUrl(content.category,content.item_id)" class="one-content">
-        <text v-if="content.category=='1'">-{{content.tag_list[0].title}}-</text>
+        <text v-if="content.category=='1'&&content.tag_list.length>0">-{{content.tag_list[0].title}}-</text>
+        <text v-if="content.category=='1'&&content.tag_list.length==0" >-阅读-</text>
         <text v-if="content.category=='2'" >-连载-</text>
         <text v-if="content.category=='3'" >-问答-</text>
         <text v-if="content.category=='4'" >-音乐-</text>
@@ -42,7 +42,7 @@
 <script>
 export default {
   created() {},
-  props: {
+  props: {      //为了学习父组件传值给子组件，使用props进行传值
     weather: Object,
     ContentList: Object
   },
