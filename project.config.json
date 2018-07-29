@@ -7,10 +7,12 @@
 		"minified": true,
 		"newFeature": true
 	},
+    "client": "./client",
+    "svr": "./server",
 	"miniprogramRoot": "./dist/",
 	"compileType": "miniprogram",
 	"appid": "wxa3a2f59938c20027",
-	"projectname": "mpvue-one-0721",
+	"projectname": "mpvue-one-strick01",
 	"condition": {
 		"search": {
 			"current": -1,

@@ -26,7 +26,7 @@ export default {
   created() {
   },
   data(){
-    return {
+    return { 
       InfoDetail:""
     }
   },
@@ -37,6 +37,7 @@ export default {
     ...mapActions("detail",["clearEssayDetail","getEssayDetail"]),
     async initPage(id){
         await this.getEssayDetail(id);
+        this.data.essayDetail.hp_content=this.data.essayDetail.hp_content.replace(/\<img/gi, '<img style="max-width:100%;height:auto"');
         this.InfoDetail=this.data.essayDetail;
     }
 
