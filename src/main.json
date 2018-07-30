@@ -24,19 +24,19 @@
           "pagePath":"pages/home/main",
           "text":"HOME",
           "iconPath":"rec/icon/one.png",
-          "selectedIconPath":"rec/icon/one.png"
+          "selectedIconPath":"rec/icon/one-active.png"
       },
       {
           "pagePath":"pages/all/main",
           "text":"ALL",
           "iconPath":"rec/icon/all.png",
-          "selectedIconPath":"rec/icon/all.png"
+          "selectedIconPath":"rec/icon/all-active.png"
       },
       {
           "pagePath":"pages/me/main",
           "text":"ME",
           "iconPath":"rec/icon/me.png",
-          "selectedIconPath":"rec/icon/me.png"
+          "selectedIconPath":"rec/icon/me-active.png"
       }
     ]
   }
