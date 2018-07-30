@@ -2,6 +2,12 @@
 
 > 仿One小程序(个人学习)
 
+>使用mpvue+vuex+flyio+ONE API实现仿ONE的小程序
+> #功能：
+>首页每日推荐5篇文章
+>ALL可以获取不同类型文章的最新十篇内容
+>ME显示个人微信信息
+
 ## Build Setup
 
 ``` bash
